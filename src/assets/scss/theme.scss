@@ -1,2 +1,2 @@
-$primary: #41B883;
-$secondary: #35495E;
+$primary: var(--primary, #41B883);
+$secondary: var(--secondary, #35495E);
