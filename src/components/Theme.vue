@@ -6,10 +6,15 @@
     <p class="secondary">Secondary</p>
 
     <div class="color_wrap">
-      <input type="text" v-model="theme.primary" placeholder="primary">
-      <input type="text" v-model="theme.secondary" placeholder="secondary">
+      <ColorPicker
+        :value ="_theme.primary"
+        @input="setThemeColor($event.hex, 'Primary')"
+      />
 
-      <button type="button" @click="setTheme">SETTING !</button>
+      <ColorPicker
+        :value ="_theme.secondary"
+        @input="setThemeColor($event.hex, 'Secondary')"
+      />
     </div>
   </div>
 </template>
@@ -18,17 +23,12 @@
 export default {
   name: 'Theme',
   created () {
-    this.theme = this.$store.getters.getTheme
   },
   computed: {
     _theme () { return this.$store.getters.getTheme }
   },
   data () {
     return {
-      theme: {
-        primary: '',
-        secondary: '',
-      }
     }
   },
   mounted () {
@@ -36,11 +36,11 @@ export default {
     bodyStyles.setProperty('--primary', '#DCF4FF')
   },
   methods: {
-    setTheme () {
-      this.$store.commit('setTheme', this.theme)
+    setThemeColor (hex, degree) {
+      this.$store.commit(`setTheme${degree}`, hex)
       const bodyStyles = document.body.style
-      bodyStyles.setProperty('--primary', this.theme.primary)
-      bodyStyles.setProperty('--secondary', this.theme.secondary)
+      bodyStyles.setProperty('--primary', this._theme.primary)
+      bodyStyles.setProperty('--secondary', this._theme.secondary)
     }
   }
 }

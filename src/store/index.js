@@ -11,7 +11,8 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    setTheme (state, value) { state.app = value },
+    setThemePrimary (state, value) { state.theme.primary = value },
+    setThemeSecondary (state, value) { state.theme.secondary = value },
   },
   getters: {
     getTheme: state => state.theme,
