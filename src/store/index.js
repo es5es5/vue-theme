@@ -13,6 +13,9 @@ export default new Vuex.Store({
   mutations: {
     setTheme (state, value) { state.app = value },
   },
+  getters: {
+    getTheme: state => state.theme,
+  },
   actions: {
   },
   modules: {
