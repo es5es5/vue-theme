@@ -16,6 +16,8 @@
         @input="setThemeColor($event.hex, 'Secondary')"
       />
     </div>
+
+    <button type="button" @click="goExample">Example</button>
   </div>
 </template>
 
@@ -41,6 +43,11 @@ export default {
       const bodyStyles = document.body.style
       bodyStyles.setProperty('--primary', this._theme.primary)
       bodyStyles.setProperty('--secondary', this._theme.secondary)
+    },
+    goExample () {
+      this.$router.push({
+        name: 'Example'
+      })
     }
   }
 }

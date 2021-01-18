@@ -7,8 +7,18 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../components/Theme')
-  }
+    component: () => import('../components/Home')
+  },
+  {
+    path: '/example',
+    name: 'Example',
+    component: () => import('../components/Example'),
+  },
+  {
+    path: '/emxample/pines2',
+    name: 'Pines2',
+    component: () => import('@/templates/pines2/Pines2'),
+  },
 ]
 
 const router = new VueRouter({
