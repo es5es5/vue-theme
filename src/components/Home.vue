@@ -35,7 +35,8 @@ export default {
   },
   mounted () {
     const bodyStyles = document.body.style
-    bodyStyles.setProperty('--primary', '#DCF4FF')
+    bodyStyles.setProperty('--primary', this._theme.primary)
+    bodyStyles.setProperty('--secondary', this._theme.secondary)
   },
   methods: {
     setThemeColor (hex, degree) {
