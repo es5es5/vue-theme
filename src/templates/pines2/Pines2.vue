@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2>PINES 2</h2>
+  <div id="pines2">
+    <h2>Peoplelife <span>PINES 2</span></h2>
     <header class="header">
       <h3 class="title">프로그램 개발요청</h3>
       <ul class="menu">
@@ -14,7 +14,7 @@
     </header>
     <div class="tab_wrap">
       <ul class="tab">
-        <li class="tab-item">프로그램 요청</li>
+        <li class="tab-item active">프로그램 요청</li>
         <li class="tab-item">진행점검</li>
         <li class="tab-item">장애신고</li>
       </ul>
@@ -26,8 +26,8 @@
       <input type="text">
       <label for="">담당자</label>
       <input type="text">
-      <button type="button">검색</button>
-      <button type="button">등록</button>
+      <button type="button" class="btn search">검색</button>
+      <button type="button" class="btn create">등록</button>
     </div>
     <div class="table_wrap">
       <table>
@@ -74,8 +74,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h2 {
+  span {
+    color: $primary;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#pines2 {
+  margin: 0 auto;
+  width: 1440px;
+}
+
 .header {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 80px;
+
   .title {
+    font-size: 20px;
+    margin-right: 100px;
+    color: $primary;
     display: inline-block;
   }
 
@@ -84,8 +106,61 @@ export default {
 
     .menu-item {
       display: inline-block;
-      background-color: $primary;
+      margin: 0 20px;
+      font-weight: bold;
     }
+  }
+}
+
+.search_wrap {
+  label {
+    color: $primary;
+    padding-right: 10px;
+  }
+
+  input {
+    border-color: $secondary;
+    margin-right: 10px;
+  }
+}
+
+.tab_wrap {
+  border-bottom: 1px solid $secondary;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+
+  .tab-item {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 1px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: lightgray;
+
+    &.active {
+      background-color: $primary;
+      color: #fff;
+    }
+  }
+}
+
+.btn {
+  padding: 5px 10px;
+  background-color: lightgray;
+  border: none;
+  margin: 0 2px;
+  vertical-align: middle;
+
+  &.create {
+    background-color: $primary;
+    color: #fff;
+  }
+
+  &.search {
+    background-color: $secondary;
+    color: #fff;
   }
 }
 </style>
