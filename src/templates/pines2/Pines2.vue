@@ -35,6 +35,9 @@
           <col style="width: 50px;">
           <col style="width: 50px;">
           <col style="width: 50px;">
+          <col style="width: 50px;">
+          <col style="width: 50px;">
+          <col style="width: 50px;">
           <col style="width: 100px;">
           <col style="width: 50px;">
         </colgroup>
@@ -121,6 +124,7 @@ ul {
   input {
     border-color: $secondary;
     margin-right: 10px;
+    padding: 10px 20px;
   }
 }
 
@@ -161,6 +165,32 @@ ul {
   &.search {
     background-color: $secondary;
     color: #fff;
+  }
+}
+
+table {
+  margin-top: 20px;
+  border-top: 2px solid $secondary;
+  border-bottom: 1px solid #dcdcdc;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+  width: 100%;
+
+  th {
+    border-radius: 0;
+    background: #f0f0f0;
+    padding: 4px;
+    height: 34px;
+    text-align: center;
+    color: $secondary;
+  }
+
+  td {
+    padding: 4px;
+    height: 34px;
+    text-align: center;
+    border-left: 1px solid rgba(34,36,38,.1);
   }
 }
 </style>
