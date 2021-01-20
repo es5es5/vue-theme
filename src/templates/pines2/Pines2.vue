@@ -1,6 +1,6 @@
 <template>
   <div id="pines2">
-    <h2>Peoplelife <span>PINES 2</span></h2>
+    <h2>EXAMPLE1 : Peoplelife <span>PINES 2</span></h2>
     <header class="header">
       <h3 class="title">프로그램 개발요청</h3>
       <ul class="menu">
@@ -55,14 +55,34 @@
         </thead>
         <tbody>
           <tr>
-            <td><span>-</span></td>
-            <td><span>-</span></td>
-            <td><span>-</span></td>
-            <td><span>-</span></td>
-            <td><span>-</span></td>
-            <td><span>-</span></td>
-            <td><span>-</span></td>
-            <td><span>-</span></td>
+            <td><span>3</span></td>
+            <td><span>T-SYSTEM</span></td>
+            <td><span>일단해주세요</span></td>
+            <td><span>박떙떙</span></td>
+            <td><span>2020-06-05</span></td>
+            <td><span>뚱뚱이</span></td>
+            <td><span>완료</span></td>
+            <td><span>쩡끼쭈</span></td>
+          </tr>
+          <tr>
+            <td><span>2</span></td>
+            <td><span>수수료</span></td>
+            <td><span>수수료 많이주세요</span></td>
+            <td><span>김땡땡</span></td>
+            <td><span>2020-05-05</span></td>
+            <td><span>떙땡이</span></td>
+            <td><span>완료</span></td>
+            <td><span>쏜일씅</span></td>
+          </tr>
+          <tr>
+            <td><span>1</span></td>
+            <td><span>T-SYSTEM</span></td>
+            <td><span>아무튼 해주세요</span></td>
+            <td><span>김땡땡</span></td>
+            <td><span>2020-05-08</span></td>
+            <td><span>낑낑이</span></td>
+            <td><span>반려</span></td>
+            <td><span>꿘쑨용</span></td>
           </tr>
         </tbody>
       </table>
@@ -151,7 +171,7 @@ ul {
 }
 
 .btn {
-  padding: 5px 10px;
+  padding: 10px 20px;
   background-color: lightgray;
   border: none;
   margin: 0 2px;
@@ -190,6 +210,7 @@ table {
     padding: 4px;
     height: 34px;
     text-align: center;
+    border-top: 1px solid rgba(34,36,38,.1);
     border-left: 1px solid rgba(34,36,38,.1);
   }
 }
