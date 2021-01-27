@@ -3,6 +3,7 @@
     Hello Theme !
 
     <button type="button" @click="goExample('Pines2')">PINES 2</button>
+    <button type="button" @click="goExample('TSystem')">T SYSTEM</button>
   </div>
 </template>
 

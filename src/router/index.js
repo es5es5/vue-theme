@@ -19,6 +19,11 @@ const routes = [
     name: 'Pines2',
     component: () => import('@/templates/pines2/Pines2'),
   },
+  {
+    path: '/emxample/t-system',
+    name: 'TSystem',
+    component: () => import('@/templates/tSystem/TSystem'),
+  },
 ]
 
 const router = new VueRouter({

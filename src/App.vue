@@ -21,4 +21,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.primary { color: $primary }
+.secondary { color: $secondary }
 </style>

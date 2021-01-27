@@ -1,6 +1,6 @@
 <template>
   <div id="pines2">
-    <h2>EXAMPLE1 : Peoplelife <span>PINES 2</span></h2>
+    <h2>Example1: <span class="secondary">Peoplelife Next Generation ERP</span> <span class="primary">Pines 2</span></h2>
     <header class="header">
       <h3 class="title">프로그램 개발요청</h3>
       <ul class="menu">
@@ -97,12 +97,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h2 {
-  span {
-    color: $primary;
-  }
-}
-
 ul {
   margin: 0;
   padding: 0;

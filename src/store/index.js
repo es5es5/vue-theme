@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     theme: {
-      primary: '#00d231',
+      primary: '#00D231',
       secondary: '#46596C',
     }
   },
