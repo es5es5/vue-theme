@@ -10,7 +10,12 @@
           <li class="side-item"><img src="@/assets/images/customer.svg" alt="customer" class="sideImg"></li>
           <li class="side-item"><img src="@/assets/images/customer.svg" alt="customer" class="sideImg"></li>
           <li class="side-item"><img src="@/assets/images/customer.svg" alt="customer" class="sideImg"></li>
-          <li class="side-item"><img src="@/assets/images/customer.svg" alt="customer" class="sideImg"></li>
+          <li class="side-item">
+            <svg width="30" height="30" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path :fill="mixinGetTheme.primary" d="M8.99997 8.52941C11.2091 8.52941 13 6.84389 13 4.7647C13 2.68552 11.2091 1 8.99997 1C6.79083 1 4.99997 2.68552 4.99997 4.7647C4.99997 6.84389 6.79083 8.52941 8.99997 8.52941Z" fill-opacity="0.7"/>
+              <path :fill="mixinGetTheme.primary" d="M17 17V13.2353C17 12.6706 16.7 12.1059 16.2 11.7294C15.1 10.8823 13.7 10.3176 12.3 9.94117C11.3 9.65882 10.2 9.47058 9 9.47058C7.9 9.47058 6.8 9.65882 5.7 9.94117C4.3 10.3176 2.9 10.9765 1.8 11.7294C1.3 12.1059 1 12.6706 1 13.2353V17H17Z" fill-opacity="0.7"/>
+            </svg>
+          </li>
           <li class="side-item"><img src="@/assets/images/customer.svg" alt="customer" class="sideImg"></li>
         </ul>
       </div>

@@ -7,12 +7,12 @@
 
     <div class="color_wrap">
       <ColorPicker
-        :value ="_theme.primary"
+        :value ="mixinGetTheme.primary"
         @input="setThemeColor($event.hex, 'Primary')"
       />
 
       <ColorPicker
-        :value ="_theme.secondary"
+        :value ="mixinGetTheme.secondary"
         @input="setThemeColor($event.hex, 'Secondary')"
       />
     </div>
@@ -27,7 +27,7 @@ export default {
   created () {
   },
   computed: {
-    _theme () { return this.$store.getters.getTheme }
+    mixinGetTheme () { return this.$store.getters.getTheme }
   },
   data () {
     return {
@@ -35,15 +35,15 @@ export default {
   },
   mounted () {
     const bodyStyles = document.body.style
-    bodyStyles.setProperty('--primary', this._theme.primary)
-    bodyStyles.setProperty('--secondary', this._theme.secondary)
+    bodyStyles.setProperty('--primary', this.mixinGetTheme.primary)
+    bodyStyles.setProperty('--secondary', this.mixinGetTheme.secondary)
   },
   methods: {
     setThemeColor (hex, degree) {
       this.$store.commit(`setTheme${degree}`, hex)
       const bodyStyles = document.body.style
-      bodyStyles.setProperty('--primary', this._theme.primary)
-      bodyStyles.setProperty('--secondary', this._theme.secondary)
+      bodyStyles.setProperty('--primary', this.mixinGetTheme.primary)
+      bodyStyles.setProperty('--secondary', this.mixinGetTheme.secondary)
     },
     goExample () {
       this.$router.push({

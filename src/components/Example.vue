@@ -13,7 +13,7 @@ export default {
   created () {
   },
   computed: {
-    _theme () { return this.$store.getters.getTheme }
+    mixinGetTheme () { return this.$store.getters.getTheme }
   },
   data () {
     return {
@@ -25,8 +25,8 @@ export default {
     setThemeColor (hex, degree) {
       this.$store.commit(`setTheme${degree}`, hex)
       const bodyStyles = document.body.style
-      bodyStyles.setProperty('--primary', this._theme.primary)
-      bodyStyles.setProperty('--secondary', this._theme.secondary)
+      bodyStyles.setProperty('--primary', this.mixinGetTheme.primary)
+      bodyStyles.setProperty('--secondary', this.mixinGetTheme.secondary)
     },
     goExample (name) {
       this.$router.push({

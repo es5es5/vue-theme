@@ -3,7 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import MIXSINS from './js/mixins'
+
 import './plugins'
+
+Vue.use(MIXSINS)
 
 Vue.config.productionTip = false
 
