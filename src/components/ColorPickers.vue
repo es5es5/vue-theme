@@ -1,18 +1,23 @@
 <template>
   <div id="ColorPickers">
-    <router-link tag="button" type="button" :to="{name: 'Pines2'}">Pines2</router-link>
-    <router-link tag="button" type="button" :to="{name: 'TSystem'}">TSystem</router-link>
-    <button type="button" @click="setInit">INIT</button>
+    <div class="colorpicker_wrap">
+      <p class="color-title primary">PRIMARY</p>
+      <ColorPicker
+        :value ="mixinGetTheme.primary"
+        @input="setThemeColor($event.hex, 'Primary')"
+      />
 
-    <ColorPicker
-      :value ="mixinGetTheme.primary"
-      @input="setThemeColor($event.hex, 'Primary')"
-    />
-
-    <ColorPicker
-      :value ="mixinGetTheme.secondary"
-      @input="setThemeColor($event.hex, 'Secondary')"
-    />
+      <p class="color-title secondary">PRIMARY</p>
+      <ColorPicker
+        :value ="mixinGetTheme.secondary"
+        @input="setThemeColor($event.hex, 'Secondary')"
+      />
+    </div>
+    <div class="router_wrap" v-if="true">
+      <router-link tag="button" type="button" :to="{name: 'Pines2'}">Pines2</router-link>
+      <router-link tag="button" type="button" :to="{name: 'TSystem'}">TSystem</router-link>
+      <button type="button" @click="setInit">INIT</button>
+    </div>
   </div>
 </template>
 
@@ -46,10 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#ColorPickers {
-  z-index: 5000;
-  position: absolute;
-  top: 20px;
-  right: 50px;
+.color-title {
+  font-weight: bold;
 }
 </style>

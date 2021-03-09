@@ -1,7 +1,14 @@
 <template>
   <div id="app">
     <router-view/>
-    <ColorPickers></ColorPickers>
+    <div class="slide_wrap">
+      <Slide
+        right
+        noOverlay
+      >
+        <ColorPickers></ColorPickers>
+      </Slide>
+    </div>
   </div>
 </template>
 
@@ -17,6 +24,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/slide.scss';
+
 body {
   margin: 0;
   padding: 0;
