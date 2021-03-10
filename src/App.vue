@@ -10,6 +10,7 @@
         <ColorPickers></ColorPickers>
       </Slide>
     </div>
+    <img src="@/assets/images/Github.svg" alt="Github" class="github" @click="goGithub">
   </div>
 </template>
 
@@ -20,6 +21,9 @@ export default {
   name: 'App',
   components: {
     ColorPickers
+  },
+  methods: {
+    goGithub () { window.open('https://github.com/es5es5/vue-theme', '_blank') }
   }
 }
 </script>
@@ -43,4 +47,12 @@ body {
 </style>
 
 <style lang="scss" scoped>
+.github {
+  &:hover {
+    cursor: pointer;
+  }
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
 </style>
