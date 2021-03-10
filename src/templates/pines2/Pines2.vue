@@ -136,14 +136,14 @@ ul {
   }
 
   input {
-    border-color: $secondary;
+    border-color: $border;
     margin-right: 10px;
     padding: 10px 20px;
   }
 }
 
 .tab_wrap {
-  border-bottom: 1px solid $secondary;
+  border-bottom: 1px solid $border;
   margin-bottom: 20px;
   display: inline-block;
   width: 100%;

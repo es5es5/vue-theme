@@ -1,5 +1,10 @@
 <template>
   <div id="ColorPickers">
+    <div class="router_wrap">
+      <button type="button" class="btn" @click="reset">Reset</button>
+      <router-link tag="button" type="button" class="btn" :to="{name: 'Pines2'}">Pines2</router-link>
+      <router-link tag="button" type="button" class="btn" :to="{name: 'TSystem'}">TSystem</router-link>
+    </div>
     <div class="colorpicker_wrap">
       <p class="color-title primary">PRIMARY</p>
       <ColorPicker
@@ -24,11 +29,6 @@
         :value ="mixinGetTheme.border"
         @input="setThemeColor($event.hex, 'Border')"
       />
-    </div>
-    <div class="router_wrap">
-      <button type="button" class="btn" @click="reset">Reset</button>
-      <router-link tag="button" type="button" class="btn" :to="{name: 'Pines2'}">Pines2</router-link>
-      <router-link tag="button" type="button" class="btn" :to="{name: 'TSystem'}">TSystem</router-link>
     </div>
   </div>
 </template>

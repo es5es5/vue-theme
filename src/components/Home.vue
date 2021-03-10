@@ -1,23 +1,8 @@
 <template>
   <div id="theme">
-    Hello Theme !
-
-    <p class="primary">Primary</p>
-    <p class="secondary">Secondary</p>
-
-    <div class="color_wrap">
-      <ColorPicker
-        :value ="mixinGetTheme.primary"
-        @input="setThemeColor($event.hex, 'Primary')"
-      />
-
-      <ColorPicker
-        :value ="mixinGetTheme.secondary"
-        @input="setThemeColor($event.hex, 'Secondary')"
-      />
-    </div>
-
-    <button type="button" @click="goExample">Example</button>
+    <h1>
+      Hello, Vue Theme !
+    </h1>
   </div>
 </template>
 
@@ -55,6 +40,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  padding: 20%;
+  margin: 0;
+  color: $primary;
+  font-size: 50px;
+}
 #theme {
   background-color: gray;
   height: 100vh;
