@@ -12,7 +12,6 @@
   }
   .line-style {
     position: absolute;
-    height: 20%;
     left: 0;
     right: 0;
   }
@@ -36,7 +35,7 @@
     z-index: 1000; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: rgb(63, 63, 65); /* Black*/
+    background-color: rgba(#b8b7ad, .8);
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
@@ -47,16 +46,17 @@
   }
   .bm-item-list {
     color: #b8b7ad;
-    margin-left: 10%;
+    margin: 0 10%;
     font-size: 20px;
   }
   .bm-item-list > * {
-    display: flex;
+    display: initial;
     text-decoration: none;
-    padding: 0.7em;
+    padding: 0;
+    margin: 0 auto;
   }
   .bm-item-list > * > span {
-    margin-left: 10px;
+    margin-left: 0;
     font-weight: 700;
     color: white;
   }
