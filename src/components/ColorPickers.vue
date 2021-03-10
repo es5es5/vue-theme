@@ -12,6 +12,18 @@
         :value ="mixinGetTheme.secondary"
         @input="setThemeColor($event.hex, 'Secondary')"
       />
+
+      <p class="color-title font">FONT</p>
+      <ColorPicker
+        :value ="mixinGetTheme.font"
+        @input="setThemeColor($event.hex, 'Font')"
+      />
+
+      <p class="color-title background">BACKGROUND</p>
+      <ColorPicker
+        :value ="mixinGetTheme.background"
+        @input="setThemeColor($event.hex, 'Background')"
+      />
     </div>
     <div class="router_wrap">
       <button type="button" class="btn" @click="reset">Reset</button>
@@ -31,15 +43,21 @@ export default {
     reset (hex, degree) {
       this.$store.commit('setThemePrimary', '#00D231')
       this.$store.commit('setThemeSecondary', '#46596C')
+      this.$store.commit('setThemeFont', '#000000')
+      this.$store.commit('setThemeBackground', '#F0F0F0')
       const bodyStyles = document.body.style
       bodyStyles.setProperty('--primary', this.mixinGetTheme.primary)
       bodyStyles.setProperty('--secondary', this.mixinGetTheme.secondary)
+      bodyStyles.setProperty('--font', this.mixinGetTheme.font)
+      bodyStyles.setProperty('--background', this.mixinGetTheme.background)
     },
-    setThemeColor (hex, degree) {
-      this.$store.commit(`setTheme${degree}`, hex)
+    setThemeColor (hex, target) {
+      this.$store.commit(`setTheme${target}`, hex)
       const bodyStyles = document.body.style
       bodyStyles.setProperty('--primary', this.mixinGetTheme.primary)
       bodyStyles.setProperty('--secondary', this.mixinGetTheme.secondary)
+      bodyStyles.setProperty('--font', this.mixinGetTheme.font)
+      bodyStyles.setProperty('--background', this.mixinGetTheme.background)
     },
     goExample () {
       this.$router.push({
@@ -53,6 +71,7 @@ export default {
 <style lang="scss" scoped>
 .color-title {
   font-weight: bold;
+  margin-bottom: 4px;
 }
 
 .btn {

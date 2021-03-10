@@ -37,7 +37,7 @@
     left: 0;
     background-color: rgba(#b8b7ad, .8);
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding: 0; /* Place content 60px from the top */
     transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
   }
 
@@ -45,9 +45,12 @@
     background: rgba(0, 0, 0, 0.3);
   }
   .bm-item-list {
+    padding-top: 60px;
     color: #b8b7ad;
     margin: 0 10%;
     font-size: 20px;
+    overflow-y: scroll;
+    max-height: calc(100vh - 150px);
   }
   .bm-item-list > * {
     display: initial;

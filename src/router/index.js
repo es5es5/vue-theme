@@ -32,4 +32,9 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  document.title = 'Vue Theme'
+  next()
+})
+
 export default router
