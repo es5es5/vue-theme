@@ -150,14 +150,14 @@ main {
 
 .menu_wrap {
   list-style-type: none;
-  border: 1px solid rgba(#c3c8cd, .5);
+  border: 1px solid rgba($border, .5);
 
   .menu-item {
     cursor: pointer;
     display: inline-block;
     margin: 0 10px;
     padding: 15px 10px;
-    border-bottom: 2px solid #c3c8cd;
+    border-bottom: 2px solid $border;
 
     &:hover {
       color: $primary;
@@ -174,7 +174,7 @@ main {
 table {
   margin-top: 20px;
   border-top: 2px solid $secondary;
-  border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1px solid $border;
   border-left: 0;
   border-right: 0;
   border-radius: 0;
@@ -193,8 +193,8 @@ table {
     padding: 4px;
     height: 34px;
     text-align: center;
-    border-top: 1px solid rgba(34,36,38,.1);
-    border-left: 1px solid rgba(34,36,38,.1);
+    border-top: 1px solid $border;
+    border-left: 1px solid $border;
   }
 }
 </style>

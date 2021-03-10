@@ -108,7 +108,7 @@ ul {
 }
 
 .header {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid $border;
   margin-bottom: 80px;
 
   .title {
@@ -185,7 +185,7 @@ ul {
 table {
   margin-top: 20px;
   border-top: 2px solid $secondary;
-  border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1px solid $border;
   border-left: 0;
   border-right: 0;
   border-radius: 0;

@@ -19,10 +19,10 @@
         @input="setThemeColor($event.hex, 'Font')"
       />
 
-      <p class="color-title background">BACKGROUND</p>
+      <p class="color-title border">BORDER</p>
       <ColorPicker
-        :value ="mixinGetTheme.background"
-        @input="setThemeColor($event.hex, 'Background')"
+        :value ="mixinGetTheme.border"
+        @input="setThemeColor($event.hex, 'Border')"
       />
     </div>
     <div class="router_wrap">
@@ -44,12 +44,12 @@ export default {
       this.$store.commit('setThemePrimary', '#00D231')
       this.$store.commit('setThemeSecondary', '#46596C')
       this.$store.commit('setThemeFont', '#000000')
-      this.$store.commit('setThemeBackground', '#F0F0F0')
+      this.$store.commit('setThemeBorder', '#F0F0F0')
       const bodyStyles = document.body.style
       bodyStyles.setProperty('--primary', this.mixinGetTheme.primary)
       bodyStyles.setProperty('--secondary', this.mixinGetTheme.secondary)
       bodyStyles.setProperty('--font', this.mixinGetTheme.font)
-      bodyStyles.setProperty('--background', this.mixinGetTheme.background)
+      bodyStyles.setProperty('--border', this.mixinGetTheme.border)
     },
     setThemeColor (hex, target) {
       this.$store.commit(`setTheme${target}`, hex)
@@ -57,7 +57,7 @@ export default {
       bodyStyles.setProperty('--primary', this.mixinGetTheme.primary)
       bodyStyles.setProperty('--secondary', this.mixinGetTheme.secondary)
       bodyStyles.setProperty('--font', this.mixinGetTheme.font)
-      bodyStyles.setProperty('--background', this.mixinGetTheme.background)
+      bodyStyles.setProperty('--border', this.mixinGetTheme.border)
     },
     goExample () {
       this.$router.push({
@@ -78,7 +78,7 @@ export default {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid transparent;
+  border: 1px solid $border;
   margin-top: 20px;
   font-size: 20px;
 }

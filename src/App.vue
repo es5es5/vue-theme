@@ -34,6 +34,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
+  color: $font;
 }
 
 *::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome, Safari and Opera */
@@ -43,7 +44,7 @@ body {
 .primary { color: $primary }
 .secondary { color: $secondary }
 .font { color: $font }
-.background { color: $background }
+.border { color: $border }
 </style>
 
 <style lang="scss" scoped>
