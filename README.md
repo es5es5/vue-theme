@@ -8,3 +8,8 @@
 $ npm install
 $ npm run serve (for localhost live)
 ```
+### Keyword
+ - SCSS
+ - Color Picker
+ - Vuex
+ - Mixin
